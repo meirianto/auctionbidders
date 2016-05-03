@@ -54,7 +54,7 @@ class Auction_Simulator(object):
 		# print "TOTAL", num_bidders, "NUM OBSERVED", len(observed_bids), " NUM HIDDEN", len(hidden_bids), " HIGHEST", highest, " PRICE", price
 		# print "==============================="
 		all_bids = observed_bids + hidden_bids + [highest]
-
+		assert(len(all_bids) == num_bidders)
 		self.g_ratio.append(num_bidders/len(observed_bids))
 		return observed_bids, all_bids, num_bidders
 
